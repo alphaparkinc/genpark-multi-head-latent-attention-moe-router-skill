@@ -1,0 +1,41 @@
+{
+  "name": "genpark-multi-head-latent-attention-moe-router-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-head latent attention MoE router directing specialized expert tokens with bounded memory footprint.",
+  "author": "genpark",
+  "category": "llm-architecture",
+  "tags": [
+    "deepseek-v3",
+    "mla-attention",
+    "moe-router",
+    "sparse-experts",
+    "kv-compression"
+  ],
+  "inputs": {
+    "input_sequence_length": {
+      "type": "integer"
+    },
+    "total_experts_count": {
+      "type": "integer"
+    },
+    "active_experts_per_token": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "moe_routing_id": {
+      "type": "string"
+    },
+    "kv_cache_compression_ratio_pct": {
+      "type": "number"
+    },
+    "expert_load_balancing_loss": {
+      "type": "number"
+    },
+    "throughput_acceleration_factor": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
